@@ -7,6 +7,19 @@
   <body>
     <h1>テストアプリ</h1>
     <h2>今月の新刊一覧</h2>
-    <p>今月の新刊情報はまだありません。</p>
+    <table border="1">
+      <tr>
+        <th>タイトル</th>
+        <th>著者</th>
+        <th>出版年</th>
+      </tr>
+      {% for book in books %}
+      <tr>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.year}}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>

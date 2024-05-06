@@ -12,3 +12,7 @@ def index():
         'year': 1931}
     ]
     return render_template('index.html', books=books)
+
+@app.route('/form')
+def form():
+    return render_template('form.html')

@@ -7,6 +7,9 @@
   <body>
     <h1>テストアプリ</h1>
     <h2>今月の新刊一覧</h2>
+    {% if books == [] %}
+    <p>今月の新刊はありません。</p>
+    {% else %}
     <table border="1">
       <tr>
         <th>タイトル</th>
@@ -21,5 +24,7 @@
       </tr>
       {% endfor %}
     </table>
+    {% endif %}
+    <a href="{{url_for('form')}}">新刊登録</a>
   </body>
 </html>

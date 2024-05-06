@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <title>テストアプリ</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
   </head>
   <body>
     <h1>テストアプリ</h1>
-    <h2>新刊登録</h2>
-    <form action="/form" method="post">
-      <label for="title">タイトル</label>
-      <input type="text" name="title" id="title" />
+    <form method="post" action="{{url_for('register')}}">
+      <table border="1">
+        <tr>
+          <th>タイトル</th>
+          <th>著者</th>
+          <th>出版年</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="title" /></td>
+          <td><input type="text" name="author" /></td>
+          <td><input type="text" name="year" /></td>
+        </tr>
+      </table>
       <br />
-      <label for="author">著者</label>
-      <input type="text" name="author" id="author" />
-      <br />
-      <label for="year">出版年</label>
-      <input type="text" name="year" id="year" />
-      <br />
+      <h2>新刊登録</h2>
       <input type="submit" value="登録" />
     </form>
   </body>

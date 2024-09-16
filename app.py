@@ -1,4 +1,4 @@
-from flask_app import app
+from . import app
 from flask import render_template, request,redirect, url_for
 import sqlite3
 DATABASE = 'database.db'
